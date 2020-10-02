@@ -26,6 +26,7 @@ function App() {
             type="number"
             value={inputs.revenueTarget}
             onChange={handleInput("revenueTarget")}
+            label="Revenue target"
           />
           <code>{JSON.stringify(inputs)}</code>
         </div>
