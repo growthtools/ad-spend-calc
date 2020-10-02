@@ -29,7 +29,6 @@ function App() {
           <StrategyCalls {...{ inputs, handleInput }} />
           <Conversions {...{ inputs, handleInput }} />
           <CostPerClick {...{ inputs, handleInput }} />
-          <code>{JSON.stringify(inputs)}</code>
         </div>
         <div className="col">
           <h2>Results</h2>
