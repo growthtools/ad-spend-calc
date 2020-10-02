@@ -4,6 +4,7 @@ import { useImmer } from "use-immer";
 
 import RevenueGoals from "./RevenueGoals";
 import StrategyCalls from "./StrategyCalls";
+import Conversions from "./Conversions";
 
 function App() {
   const [inputs, setInputs] = useImmer(industryStandards);
@@ -25,6 +26,7 @@ function App() {
         <div className="col">
           <RevenueGoals {...{ inputs, handleInput }} />
           <StrategyCalls {...{ inputs, handleInput }} />
+          <Conversions {...{ inputs, handleInput }} />
           <code>{JSON.stringify(inputs)}</code>
         </div>
         <div className="col">
