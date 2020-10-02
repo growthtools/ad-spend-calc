@@ -5,6 +5,6 @@ import App from "./App";
 
 test("renders the heading", () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/ad spend/i);
+  const linkElement = getByText(/calculator/i);
   expect(linkElement).toBeInTheDocument();
 });
