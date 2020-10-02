@@ -2,23 +2,11 @@ import React from "react";
 import "./App.css";
 import { useImmer } from "use-immer";
 
-interface changeEvent {
-  target: valued
-}
-
-interface valued {
-  value: string
-}
-
-interface
-
-
-
 function App() {
   const [inputs, setInputs] = useImmer(industryStandards);
 
-  const handleInput = (field: any, e: changeEvent) => {
-    setInputs((draft: ) => {
+  const handleInput = field => e => {
+    setInputs(draft => {
       draft[field] = e.target.value;
     });
   };
@@ -26,7 +14,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Calculate your Ad Spend</p>
+        <input
+          type="text"
+          value={inputs.reveueTaret}
+          onChange={handleInput("revenueTarget")}
+        />
         <code>{JSON.stringify(inputs)}</code>
       </header>
     </div>
