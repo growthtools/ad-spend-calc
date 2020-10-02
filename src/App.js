@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { useImmer } from "use-immer";
+import Input from "./Input.js";
 
 function App() {
   const [inputs, setInputs] = useImmer(industryStandards);
@@ -14,9 +15,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <input
-          type="text"
-          value={inputs.reveueTaret}
+        <Input
+          type="number"
+          value={inputs.revenueTarget}
           onChange={handleInput("revenueTarget")}
         />
         <code>{JSON.stringify(inputs)}</code>
