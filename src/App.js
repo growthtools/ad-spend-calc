@@ -3,6 +3,7 @@ import "./App.css";
 import { useImmer } from "use-immer";
 
 import RevenueGoals from "./RevenueGoals";
+import StrategyCalls from "./StrategyCalls";
 
 function App() {
   const [inputs, setInputs] = useImmer(industryStandards);
@@ -23,6 +24,7 @@ function App() {
       <div className="main-content">
         <div className="col">
           <RevenueGoals {...{ inputs, handleInput }} />
+          <StrategyCalls {...{ inputs, handleInput }} />
           <code>{JSON.stringify(inputs)}</code>
         </div>
         <div className="col">
@@ -38,6 +40,7 @@ export default App;
 const industryStandards = {
   revenueTarget: 50000,
   salePrice: 10000,
+  haveSalesCall: true,
   salesCallConversionRate: 0.2,
   cancellationRate: 0.3,
   callBookingConversionRate: 0.05,

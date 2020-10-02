@@ -1,3 +1,7 @@
+body {
+  padding: 3rem;
+}
+
 .App-header {
   display: flex;
   flex-direction: column;
