@@ -5,9 +5,9 @@ const Input = ({ onChange, value }) => {
 
   return (
     <div>
-      <div className="input-wrapper">
-        <label htmlFor="input-label">Some Input</label>
-        <input type="text" className="input-field" id="input" value={value}
+      <div className="input-form">
+        <label htmlFor="input-form" className="input-form__label">Some Input</label>
+        <input type="text" className="input-form__input" id="input-form" value={value}
           onChange={(e) => onChange(e.target.value)}></input>
       </div>
     </div>
