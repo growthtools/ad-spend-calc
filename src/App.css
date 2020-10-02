@@ -5,3 +5,35 @@
   justify-content: center;
   color: white;
 }
+
+@font-face {
+  font-family: "Brandon Text";
+  font-weight: 300;
+  src: url("./fonts/BrandonText-Light.otf");
+}
+
+@font-face {
+  font-family: "Brandon Text";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/BrandonText-Regular.otf");
+}
+
+@font-face {
+  font-family: "Brandon Text";
+  font-weight: 500;
+  src: url("./fonts/BrandonText-Medium.otf");
+}
+
+@font-face {
+  font-family: "Brandon Text";
+  font-style: bold;
+  font-weight: 700;
+  src: url("./fonts/BrandonText-Bold.otf");
+}
+
+@font-face {
+  font-family: "Brandon Text";
+  font-weight: 900;
+  src: url("./fonts/BrandonText-Black.otf");
+}
