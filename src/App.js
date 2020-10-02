@@ -15,13 +15,24 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Input
-          type="number"
-          value={inputs.revenueTarget}
-          onChange={handleInput("revenueTarget")}
-        />
-        <code>{JSON.stringify(inputs)}</code>
+        <h1>
+          Ad Spend <span className="calc">Calculator</span>
+        </h1>
       </header>
+      <div className="main-content">
+        <div className="col">
+          <h2>Revenue Goals</h2>
+          <Input
+            type="number"
+            value={inputs.revenueTarget}
+            onChange={handleInput("revenueTarget")}
+          />
+          <code>{JSON.stringify(inputs)}</code>
+        </div>
+        <div className="col">
+          <h2>Results</h2>
+        </div>
+      </div>
     </div>
   );
 }
