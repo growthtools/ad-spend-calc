@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { useImmer } from "use-immer";
 import Input from "./Input.js";
+import RadioButton from "./RadioButton";
 
 function App() {
   const [inputs, setInputs] = useImmer(industryStandards);
@@ -17,6 +18,10 @@ function App() {
       <header className="App-header">
         <Input
           type="number"
+          value={inputs.revenueTarget}
+          onChange={handleInput("revenueTarget")}
+        />
+        <RadioButton
           value={inputs.revenueTarget}
           onChange={handleInput("revenueTarget")}
         />
