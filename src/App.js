@@ -2,6 +2,8 @@ import React from "react";
 import "./App.css";
 import { useImmer } from "use-immer";
 
+import Header from "./Header";
+
 import RevenueGoals from "./RevenueGoals";
 import StrategyCalls from "./StrategyCalls";
 import Conversions from "./Conversions";
@@ -19,11 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>
-          Ad Spend <span className="calc">Calculator</span>
-        </h1>
-      </header>
+      <Header />
       <div className="main-content">
         <div className="col">
           <RevenueGoals {...{ inputs, handleInput }} />
