@@ -12,7 +12,7 @@ const Input = ({ onChange, value, label }) => {
           type="text"
           className="input-form__input"
           id="input-form"
-          value={value}
+          value={value === 0 ? "" : value}
           onChange={e => onChange(e.target.value)}
         ></input>
       </div>
