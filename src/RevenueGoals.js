@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Input from "./Input.js";
+import Input from "./Input";
+import { asFloat } from "./utils";
 
 const RevenueGoals = ({ inputs, handleInput }) => {
   return (
@@ -10,13 +11,13 @@ const RevenueGoals = ({ inputs, handleInput }) => {
       <Input
         type="number"
         value={inputs.revenueTarget}
-        onChange={handleInput("revenueTarget")}
+        onChange={asFloat(handleInput("revenueTarget"))}
         label="Revenue target"
       />
       <Input
         type="number"
         value={inputs.salePrice}
-        onChange={handleInput("salePrice")}
+        onChange={asFloat(handleInput("salePrice"))}
         label="Average cost per sale"
       />
     </>

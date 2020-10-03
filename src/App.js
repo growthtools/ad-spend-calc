@@ -6,6 +6,7 @@ import RevenueGoals from "./RevenueGoals";
 import StrategyCalls from "./StrategyCalls";
 import Conversions from "./Conversions";
 import CostPerClick from "./CostPerClick";
+import Results from "./Results";
 
 function App() {
   const [inputs, setInputs] = useImmer(industryStandards);
@@ -31,7 +32,7 @@ function App() {
           <CostPerClick {...{ inputs, handleInput }} />
         </div>
         <div className="col">
-          <h2>Results</h2>
+          <Results {...inputs} />
         </div>
       </div>
     </div>
