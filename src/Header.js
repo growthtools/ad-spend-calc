@@ -16,7 +16,7 @@ const Header = () => {
 
 export default Header;
 
-const AppHeader = styled.header`
+const AppHeader = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
