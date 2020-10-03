@@ -21,7 +21,7 @@ const AppHeader = styled.header`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3rem;
+  padding: 3rem 3rem 7.5rem;
 
   background-color: #161f5d;
   background-image: url(/star.svg);

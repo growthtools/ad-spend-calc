@@ -7,7 +7,7 @@ import { asFloat } from "./utils";
 const RevenueGoals = ({ inputs, handleInput }) => {
   return (
     <>
-      <h2>Revenue Goals</h2>
+      <h2>Revenue goals</h2>
       <Input
         type="number"
         value={inputs.revenueTarget}
