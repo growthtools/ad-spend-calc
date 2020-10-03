@@ -1,27 +1,39 @@
 import React from "react";
 import "./App.css";
 import { useImmer } from "use-immer";
-import Input from "./Input.js";
+
+import RevenueGoals from "./RevenueGoals";
+import StrategyCalls from "./StrategyCalls";
+import Conversions from "./Conversions";
+import CostPerClick from "./CostPerClick";
 
 function App() {
   const [inputs, setInputs] = useImmer(industryStandards);
 
-  const handleInput = field => e => {
+  const handleInput = field => v => {
     setInputs(draft => {
-      draft[field] = e.target.value;
+      draft[field] = v;
     });
   };
 
   return (
     <div className="App">
       <header className="App-header">
-        <Input
-          type="number"
-          value={inputs.revenueTarget}
-          onChange={handleInput("revenueTarget")}
-        />
-        <code>{JSON.stringify(inputs)}</code>
+        <h1>
+          Ad Spend <span className="calc">Calculator</span>
+        </h1>
       </header>
+      <div className="main-content">
+        <div className="col">
+          <RevenueGoals {...{ inputs, handleInput }} />
+          <StrategyCalls {...{ inputs, handleInput }} />
+          <Conversions {...{ inputs, handleInput }} />
+          <CostPerClick {...{ inputs, handleInput }} />
+        </div>
+        <div className="col">
+          <h2>Results</h2>
+        </div>
+      </div>
     </div>
   );
 }
@@ -31,6 +43,7 @@ export default App;
 const industryStandards = {
   revenueTarget: 50000,
   salePrice: 10000,
+  haveSalesCall: true,
   salesCallConversionRate: 0.2,
   cancellationRate: 0.3,
   callBookingConversionRate: 0.05,

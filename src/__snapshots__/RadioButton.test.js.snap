@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches design when an item is not selected 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bdnylx hwoZWL"
+  >
+    <label
+      class="container"
+    >
+      first
+      <input
+        name="id"
+        type="radio"
+        value="first"
+      />
+      <span
+        class="checkmark"
+      />
+    </label>
+  </div>
+  <div
+    class="sc-bdnylx hwoZWL"
+  >
+    <label
+      class="container"
+    >
+      second
+      <input
+        name="id"
+        type="radio"
+        value="second"
+      />
+      <span
+        class="checkmark"
+      />
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`matches design when an item is selected 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bdnylx hwoZWL"
+  >
+    <label
+      class="container checked"
+    >
+      first
+      <input
+        checked=""
+        name="id"
+        type="radio"
+        value="first"
+      />
+      <span
+        class="checkmark"
+      />
+    </label>
+  </div>
+  <div
+    class="sc-bdnylx hwoZWL"
+  >
+    <label
+      class="container"
+    >
+      second
+      <input
+        name="id"
+        type="radio"
+        value="second"
+      />
+      <span
+        class="checkmark"
+      />
+    </label>
+  </div>
+</DocumentFragment>
+`;
