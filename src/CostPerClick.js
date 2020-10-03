@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Input from "./Input";
+import { asFloat } from "./utils";
 
 const CostPerClick = ({ inputs, handleInput }) => {
   return (
@@ -11,13 +12,13 @@ const CostPerClick = ({ inputs, handleInput }) => {
       <Input
         type="percentage"
         value={inputs.cpc}
-        onChange={handleInput("cpc")}
+        onChange={asFloat(handleInput("cpc"))}
         label="Estimated CPC"
       />
       <Input
         type="percentage"
         value={inputs.ctr}
-        onChange={handleInput("ctr")}
+        onChange={asFloat(handleInput("ctr"))}
         label="Estimated ad CTR"
       />
     </>

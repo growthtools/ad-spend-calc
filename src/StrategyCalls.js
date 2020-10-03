@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import Input from "./Input.js";
 import RadioButton from "./RadioButton";
+import { asFloat } from "./utils";
 
 const StrategyCalls = ({ inputs, handleInput }) => {
   return (
@@ -23,13 +24,13 @@ const StrategyCalls = ({ inputs, handleInput }) => {
       <Input
         type="percentage"
         value={inputs.salesCallConversionRate}
-        onChange={handleInput("rsalesCallConversionRateevenueTarget")}
+        onChange={asFloat(handleInput("rsalesCallConversionRateevenueTarget"))}
         label="Sales call conversion rate"
       />
       <Input
         type="percentage"
         value={inputs.cancellationRate}
-        onChange={handleInput("cancellationRate")}
+        onChange={asFloat(handleInput("cancellationRate"))}
         label="Estimated no show/cancellation rate"
       />
     </>
