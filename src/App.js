@@ -6,9 +6,9 @@ import Input from "./Input.js";
 function App() {
   const [inputs, setInputs] = useImmer(industryStandards);
 
-  const handleInput = field => e => {
+  const handleInput = field => v => {
     setInputs(draft => {
-      draft[field] = e.target.value;
+      draft[field] = v;
     });
   };
 
