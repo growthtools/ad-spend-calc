@@ -3,11 +3,13 @@ import PropTypes from "prop-types";
 
 import Input from "./Input.js";
 import RadioButton from "./RadioButton";
+import InputWrapper from "./InputWrapper";
 import { asFloat } from "./utils";
+import { isComplete } from "./completion";
 
-const StrategyCalls = ({ inputs, handleInput }) => {
+const StrategyCalls = ({ inputs, handleInput, completion }) => {
   return (
-    <>
+    <InputWrapper isComplete={isComplete(completion, "cancellationRate")}>
       <h2>Strategy Calls</h2>
 
       <div className="input-form">
@@ -24,7 +26,7 @@ const StrategyCalls = ({ inputs, handleInput }) => {
       <Input
         type="percentage"
         value={inputs.salesCallConversionRate}
-        onChange={asFloat(handleInput("rsalesCallConversionRateevenueTarget"))}
+        onChange={asFloat(handleInput("salesCallConversionRate"))}
         label="Sales call conversion rate"
       />
       <Input
@@ -33,7 +35,7 @@ const StrategyCalls = ({ inputs, handleInput }) => {
         onChange={asFloat(handleInput("cancellationRate"))}
         label="Estimated no show/cancellation rate"
       />
-    </>
+    </InputWrapper>
   );
 };
 
@@ -44,6 +46,7 @@ StrategyCalls.propTypes = {
     haveSalesCall: PropTypes.bool.isRequired,
   }).isRequired,
   handleInput: PropTypes.func.isRequired,
+  completion: PropTypes.number.isRequired,
 };
 
 export default StrategyCalls;

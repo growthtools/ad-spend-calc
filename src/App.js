@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { useImmer } from "use-immer";
 import styled from "styled-components";
@@ -10,28 +10,33 @@ import StrategyCalls from "./StrategyCalls";
 import Conversions from "./Conversions";
 import CostPerClick from "./CostPerClick";
 import Results from "./Results";
+import { newCompletionFor } from "./completion";
 
 function App() {
   const [inputs, setInputs] = useImmer(industryStandards);
+  const [completion, setCompletion] = useState(0);
 
   const handleInput = field => v => {
     setInputs(draft => {
       draft[field] = v;
     });
+    console.log(field);
+    setCompletion(newCompletionFor(completion, field));
   };
 
   return (
     <div className="App">
+      {completion}
       <Header />
       <MainContent>
         <div className="col">
-          <RevenueGoals {...{ inputs, handleInput }} />
-          <StrategyCalls {...{ inputs, handleInput }} />
-          <Conversions {...{ inputs, handleInput }} />
-          <CostPerClick {...{ inputs, handleInput }} />
+          <RevenueGoals {...{ inputs, handleInput, completion }} />
+          <StrategyCalls {...{ inputs, handleInput, completion }} />
+          <Conversions {...{ inputs, handleInput, completion }} />
+          <CostPerClick {...{ inputs, handleInput, completion }} />
         </div>
         <div className="col">
-          <Results {...inputs} />
+          <Results {...inputs} completion={completion} />
         </div>
       </MainContent>
     </div>
