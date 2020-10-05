@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>16F3C885-9FC2-40C5-9318-7235C331497F</title>
+    <defs>
+        <path d="M15.3833112,-6.21504185e-16 L872.616689,6.21504185e-16 C877.965801,-3.61111829e-16 879.905519,0.556953667 881.861074,1.60279622 C883.81663,2.64863878 885.351361,4.18337022 886.397204,6.13892578 C887.443046,8.09448133 888,10.0341988 888,15.3833112 L888,1501.61669 C888,1506.9658 887.443046,1508.90552 886.397204,1510.86107 C885.351361,1512.81663 883.81663,1514.35136 881.861074,1515.3972 C879.905519,1516.44305 877.965801,1517 872.616689,1517 L15.3833112,1517 C10.0341988,1517 8.09448133,1516.44305 6.13892578,1515.3972 C4.18337022,1514.35136 2.64863878,1512.81663 1.60279622,1510.86107 C0.556953667,1508.90552 2.4074122e-16,1506.9658 -4.14336123e-16,1501.61669 L4.14336123e-16,15.3833112 C-2.4074122e-16,10.0341988 0.556953667,8.09448133 1.60279622,6.13892578 C2.64863878,4.18337022 4.18337022,2.64863878 6.13892578,1.60279622 C8.09448133,0.556953667 10.0341988,3.61111829e-16 15.3833112,-6.21504185e-16 Z" id="path-1"></path>
+        <filter x="-2.8%" y="-1.5%" width="105.6%" height="103.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="8" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-7.9%" y="-4.0%" width="115.8%" height="108.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Ad-Spend-Calculator-2" transform="translate(-756.000000, -632.000000)">
+            <rect fill="#F9FAFA" x="0" y="0" width="1440" height="2589"></rect>
+            <g id="Calculator" transform="translate(276.000000, 488.000000)" fill-rule="nonzero">
+                <g id="Combined-Shape">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                </g>
+            </g>
+            <g id="Results" filter="url(#filter-3)" transform="translate(732.000000, 528.000000)" fill-rule="nonzero">
+                <path d="M15.3833112,-6.21504185e-16 L376.616689,6.21504185e-16 C381.965801,-3.61111829e-16 383.905519,0.556953667 385.861074,1.60279622 C387.81663,2.64863878 389.351361,4.18337022 390.397204,6.13892578 C391.443046,8.09448133 392,10.0341988 392,15.3833112 L392,756.616689 C392,761.965801 391.443046,763.905519 390.397204,765.861074 C389.351361,767.81663 387.81663,769.351361 385.861074,770.397204 C383.905519,771.443046 381.965801,772 376.616689,772 L15.3833112,772 C10.0341988,772 8.09448133,771.443046 6.13892578,770.397204 C4.18337022,769.351361 2.64863878,767.81663 1.60279622,765.861074 C0.556953667,763.905519 2.4074122e-16,761.965801 -4.14336123e-16,756.616689 L4.14336123e-16,15.3833112 C-2.4074122e-16,10.0341988 0.556953667,8.09448133 1.60279622,6.13892578 C2.64863878,4.18337022 4.18337022,2.64863878 6.13892578,1.60279622 C8.09448133,0.556953667 10.0341988,3.61111829e-16 15.3833112,-6.21504185e-16 Z" id="Rectangle" fill="#0E143E"></path>
+                <g id="Line-Item" transform="translate(0.000000, 104.000000)" fill="#2CD886">
+                    <g id="All-/-Icon-/-Ribbon" transform="translate(24.000000, 0.000000)">
+                        <path d="M7.70710678,11.3186501 C7.31658249,10.9281258 6.68341751,10.9281258 6.29289322,11.3186501 C5.90236893,11.7091743 5.90236893,12.3423393 6.29289322,12.7328636 L9.379319,15.8192894 C9.76984329,16.2098137 10.4030083,16.2098137 10.7935326,15.8192894 L17.9057152,8.70710678 C18.2962395,8.31658249 18.2962395,7.68341751 17.9057152,7.29289322 C17.5151909,6.90236893 16.8820259,6.90236893 16.4915016,7.29289322 L10.0864258,13.6979691 L7.70710678,11.3186501 Z" id="Check"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
