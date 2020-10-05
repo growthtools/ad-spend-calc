@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
 import ResultItem from "./ResultItem";
+import { isComplete } from "./completion";
 
 const Results = ({
   revenueTarget,
@@ -13,6 +15,7 @@ const Results = ({
   registrationPageConversionRate,
   cpc,
   ctr,
+  completion,
 }) => {
   const salesReq = salesRequired(revenueTarget, salePrice);
   const preNoShowSalesCallCount = preNoShowSalesCallsNeeded(
@@ -39,49 +42,49 @@ const Results = ({
 
   const results = [
     {
-      completed: true,
+      completed: isComplete(completion, "salePrice"),
       label: "Sales needed",
       value: Math.ceil(salesReq).toString(),
     },
     {
-      completed: true,
+      completed: isComplete(completion, "cancellationRate"),
       label: "Sales calls needed",
       value: Math.ceil(totalsSalesCallCount).toString(),
     },
     {
-      completed: true,
+      completed: isComplete(completion, "callBookingConversionRate"),
       label: "Registrants needed",
       value: Math.ceil(registrantCount).toString(),
     },
     {
-      completed: true,
+      completed: isComplete(completion, "registrationPageConversionRate"),
       label: "Landing page view needed",
       value: Math.ceil(landingViews).toString(),
     },
     {
-      completed: true,
+      completed: isComplete(completion, "ctr"),
       label: "Reach required",
       value: Math.ceil(reachCount).toString(),
       description:
         "Make sure your audience size you choose is beg enough for this.",
     },
     {
-      completed: true,
+      completed: isComplete(completion, "cpc"),
       label: "Ad spend required",
       value: totalAdSpend.toFixed(2).toString(),
     },
     {
-      completed: true,
+      completed: isComplete(completion, "cpc"),
       label: "Cost per strategy call",
       value: eachCallCost.toFixed(2).toString(),
     },
     {
-      completed: true,
+      completed: isComplete(completion, "salePrice"),
       label: "Total revenue",
       value: actualRevenue.toFixed(2).toString(),
     },
     {
-      completed: true,
+      completed: isComplete(completion, "cpc"),
       label: "Return on ad spend (ROAS)",
       value: roas.toFixed(2).toString(),
     },
@@ -89,10 +92,10 @@ const Results = ({
 
   const resultItems = results.map(r => <ResultItem key={r.label} {...r} />);
   return (
-    <>
-      <h2>Results</h2>
+    <ResultCard>
+      <ResultHeader>Results</ResultHeader>
       {resultItems}
-    </>
+    </ResultCard>
   );
 };
 
@@ -106,6 +109,8 @@ Results.propTypes = {
   registrationPageConversionRate: PropTypes.number.isRequired,
   cpc: PropTypes.number.isRequired,
   ctr: PropTypes.number.isRequired,
+
+  completion: PropTypes.number.isRequired,
 };
 
 export default Results;
@@ -126,3 +131,14 @@ const adSpendRequired = (landingPageViews, cpc) => landingPageViews * cpc;
 const costPerCall = (adSpend, callsNeeded) => adSpend / callsNeeded;
 const totalRevenue = (salePrice, sales) => salePrice * sales;
 const returnOnAdSpend = (totalRevenue, adSpend) => totalRevenue / adSpend;
+
+const ResultCard = styled.div`
+  background-color: #0e143e;
+  color: white;
+  padding: 1rem;
+`;
+
+const ResultHeader = styled.h2`
+  color: #2cd886;
+  font-family: Times, serif;
+`;

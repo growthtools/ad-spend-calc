@@ -2,11 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Input from "./Input";
+import InputWrapper from "./InputWrapper";
 import { asFloat } from "./utils";
+import { isComplete } from "./completion";
 
-const CostPerClick = ({ inputs, handleInput }) => {
+const CostPerClick = ({ inputs, handleInput, completion }) => {
   return (
-    <>
+    <InputWrapper isComplete={isComplete(completion, "ctr")}>
       <h2>Cost per click</h2>
 
       <Input
@@ -21,7 +23,7 @@ const CostPerClick = ({ inputs, handleInput }) => {
         onChange={asFloat(handleInput("ctr"))}
         label="Estimated ad CTR"
       />
-    </>
+    </InputWrapper>
   );
 };
 
@@ -31,6 +33,7 @@ CostPerClick.propTypes = {
     ctr: PropTypes.number.isRequired,
   }).isRequired,
   handleInput: PropTypes.func.isRequired,
+  completion: PropTypes.number.isRequired,
 };
 
 export default CostPerClick;
