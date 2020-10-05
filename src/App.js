@@ -1,6 +1,9 @@
 import React from "react";
 import "./App.css";
 import { useImmer } from "use-immer";
+import styled from "styled-components";
+
+import Header from "./Header";
 
 import RevenueGoals from "./RevenueGoals";
 import StrategyCalls from "./StrategyCalls";
@@ -19,12 +22,8 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>
-          Ad Spend <span className="calc">Calculator</span>
-        </h1>
-      </header>
-      <div className="main-content">
+      <Header />
+      <MainContent>
         <div className="col">
           <RevenueGoals {...{ inputs, handleInput }} />
           <StrategyCalls {...{ inputs, handleInput }} />
@@ -34,7 +33,7 @@ function App() {
         <div className="col">
           <Results {...inputs} />
         </div>
-      </div>
+      </MainContent>
     </div>
   );
 }
@@ -52,3 +51,29 @@ const industryStandards = {
   cpc: 1,
   ctr: 0.01,
 };
+
+const MainContent = styled.div`
+  margin: -5.5rem auto 5rem;
+  padding: 2.5rem;
+  max-width: 888px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.08);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  h2 {
+    color: #161f5d;
+    font-family: Times, serif;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 2.375rem;
+    margin: 1.5rem 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+`;

@@ -1,14 +1,3 @@
-body {
-  padding: 3rem;
-}
-
-.App-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 @font-face {
   font-family: "Brandon Text";
   font-weight: 300;
@@ -39,4 +28,10 @@ body {
   font-family: "Brandon Text";
   font-weight: 900;
   src: url("./fonts/BrandonText-Black.otf");
+}
+
+@font-face {
+  font-family: "Noto Serif Myanmar Bold";
+  font-weight: 500;
+  src: url("./fonts/NotoSerifMyanmar-Bold.otf");
 }
