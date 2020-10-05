@@ -32,35 +32,49 @@ ResultItem.propTypes = {
 export default ResultItem;
 
 const Item = styled.div`
-  min-height: 73px;
   position: relative;
+  padding: 1rem 0 1.5rem;
 
   .completed {
     padding-right: .5rem;
   }
   .label {
     vertical-align: top;
+    font-weight: 500;
   }
   .value {
+    color: #2cd886;
     margin-right: 1rem;
     text-align: right;
     float: right;
   }
   p {
     color: #78909C;
-    margin: 0;
+    margin: 0 0 .5rem 2rem;
     font-size: 12px;
     font-style: italic;
     line-height: 16px;
+    max-width: 181px;
   }
-  &::after {
+    &:not(:first-of-type)::before {
     content: " ";
     position: absolute;
-    top: 3.5rem;
+    top: -.5rem;
     left: -24px;
     height: 1px;
     width: 112%;
     background-color: #0e143e;
     filter: contrast(80%);
+  }
+  &:nth-of-type(1n+8)  {
+    .value, .label {
+      font-weight: 900;
+    }
+  }
+  &:nth-of-type(0n+8)  {
+    .value::before {
+      content: "$";
+      padding-right: 3px;
+    }
   }
 `;

@@ -141,7 +141,7 @@ const ResultCard = styled.div`
 
 const ResultHeader = styled.h2`
   color: #2cd886;
-  margin: 0 0 2.75rem;
+  margin: 0 0 2.5rem;
   font-family: Times, serif;
   font-size: 24px;
   font-weight: bold;
