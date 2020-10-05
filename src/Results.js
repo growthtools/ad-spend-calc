@@ -134,11 +134,18 @@ const returnOnAdSpend = (totalRevenue, adSpend) => totalRevenue / adSpend;
 
 const ResultCard = styled.div`
   background-color: #0e143e;
+  border-radius: 12px;
   color: white;
-  padding: 1rem;
+  padding: 2.5rem 1.5rem 0 1.5rem;
 `;
 
 const ResultHeader = styled.h2`
   color: #2cd886;
+  margin: 0 0 2.75rem;
   font-family: Times, serif;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
 `;

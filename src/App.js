@@ -68,7 +68,7 @@ const MainContent = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  h2 {
+  .col:first-of-type h2 {
     color: #161f5d;
     font-family: Times, serif;
     font-size: 2rem;
