@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const Input = ({ onChange, value, label }) => {
+const Input = ({ onChange, value, label, type }) => {
   return (
-    <InputForm>
+    <InputForm inputType={type}>
       <div className="input-label">
         {label}
       </div>
@@ -32,7 +32,7 @@ const InputForm = styled.div`
   margin-bottom: 2rem;
 
   &::before {
-    content: "$";
+    content: ${p => (p.inputType == "percentage" ? "'%'" : "'$'")};
     position: absolute;
     height: 46px;
     width: 33px;
