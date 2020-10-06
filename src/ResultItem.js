@@ -7,7 +7,7 @@ import CheckGrey from "./check-grey.svg";
 
 const ResultItem = ({ completed, label, value, description }) => {
   return (
-    <Item>
+    <Item completed={completed}>
       <span className="completed">
         <img
           alt="Checkmark"
@@ -43,7 +43,7 @@ const Item = styled.div`
     font-weight: 500;
   }
   .value {
-    color: #2cd886;
+    color: ${p => (p.completed ? "#2cd886" : "#455A64")};
     margin-right: 1rem;
     text-align: right;
     float: right;
