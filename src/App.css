@@ -35,3 +35,14 @@
   font-weight: 500;
   src: url("./fonts/NotoSerifMyanmar-Bold.otf");
 }
+
+body {
+  margin: 0;
+  font-family: "Brandon Text", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: "Brandon Text", sans-serif;
+}
