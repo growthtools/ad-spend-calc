@@ -57,7 +57,7 @@ const industryStandards = {
 
 const MainContent = styled.div`
   margin: -5.5rem auto 5rem;
-  padding: 2.5rem;
+  padding: 5rem 2.5rem 2.5rem;
   max-width: 888px;
   border-radius: 12px;
   background-color: #ffffff;
@@ -78,5 +78,9 @@ const MainContent = styled.div`
     &:first-child {
       margin-top: 0;
     }
+  }
+
+  .col:last-of-type {
+    margin-top: -2.4rem;
   }
 `;
