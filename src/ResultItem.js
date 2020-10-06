@@ -72,7 +72,9 @@ const Item = styled.div`
       font-weight: 900;
     }
   }
-  &:nth-of-type(0n+8)  {
+  &:nth-of-type(0n + 6),
+  &:nth-of-type(0n + 7),
+  &:nth-of-type(0n + 8) {
     .value::before {
       content: "$";
       padding-right: 3px;
