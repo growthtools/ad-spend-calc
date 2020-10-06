@@ -44,27 +44,27 @@ const Results = ({
     {
       completed: isComplete(completion, "salePrice"),
       label: "Sales needed",
-      value: Math.ceil(salesReq).toString(),
+      value: Math.ceil(salesReq).toLocaleString("en"),
     },
     {
       completed: isComplete(completion, "cancellationRate"),
       label: "Sales calls needed",
-      value: Math.ceil(totalsSalesCallCount).toString(),
+      value: Math.ceil(totalsSalesCallCount).toLocaleString("en"),
     },
     {
       completed: isComplete(completion, "callBookingConversionRate"),
       label: "Registrants needed",
-      value: Math.ceil(registrantCount).toString(),
+      value: Math.ceil(registrantCount).toLocaleString("en"),
     },
     {
       completed: isComplete(completion, "registrationPageConversionRate"),
       label: "Landing page view needed",
-      value: Math.ceil(landingViews).toString(),
+      value: Math.ceil(landingViews).toLocaleString("en"),
     },
     {
       completed: isComplete(completion, "ctr"),
       label: "Reach required",
-      value: Math.ceil(reachCount).toString(),
+      value: Math.ceil(reachCount).toLocaleString("en"),
       description:
         "Make sure your audience size you choose is beg enough for this.",
     },
