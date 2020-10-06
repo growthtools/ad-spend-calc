@@ -47,12 +47,12 @@ const industryStandards = {
   revenueTarget: 50000,
   salePrice: 10000,
   haveSalesCall: true,
-  salesCallConversionRate: 0.2,
-  cancellationRate: 0.3,
-  callBookingConversionRate: 0.05,
-  registrationPageConversionRate: 0.2,
+  salesCallConversionRate: 20,
+  cancellationRate: 30,
+  callBookingConversionRate: 5,
+  registrationPageConversionRate: 20,
   cpc: 1,
-  ctr: 0.01,
+  ctr: 1,
 };
 
 const MainContent = styled.div`

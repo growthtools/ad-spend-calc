@@ -118,21 +118,22 @@ export default Results;
 
 const salesRequired = (revGoal, salePrice) => Math.ceil(revGoal / salePrice);
 const preNoShowSalesCallsNeeded = (salesRequired, salesCallConversionRate) =>
-  Math.ceil(salesRequired / salesCallConversionRate);
+  Math.ceil(salesRequired / asPct(salesCallConversionRate));
 const salesCallesNeeded = (preCount, cancellationRate) =>
-  Math.ceil(preCount / (1 - cancellationRate));
+  Math.ceil(preCount / (1 - asPct(cancellationRate)));
 const registrantsNeeded = (salesCallCount, callBookingConversionRate) =>
-  Math.ceil(salesCallCount / callBookingConversionRate);
+  Math.ceil(salesCallCount / asPct(callBookingConversionRate));
 const landingPageViewsNeeded = (
   registrantCount,
   registrationPageConversionRate
-) => Math.ceil(registrantCount / registrationPageConversionRate);
+) => Math.ceil(registrantCount / asPct(registrationPageConversionRate));
 const reachRequired = (landingPageViews, ctr) =>
-  Math.ceil(landingPageViews / ctr);
+  Math.ceil(landingPageViews / asPct(ctr));
 const adSpendRequired = (landingPageViews, cpc) => landingPageViews * cpc;
 const costPerCall = (adSpend, callsNeeded) => adSpend / callsNeeded;
 const totalRevenue = (salePrice, sales) => salePrice * sales;
 const returnOnAdSpend = (rev, adSpend) => rev / adSpend;
+const asPct = rate => rate / 100.0;
 
 const ResultCard = styled.div`
   background-color: #0e143e;
