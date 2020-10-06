@@ -4,20 +4,18 @@ import PropTypes from "prop-types";
 
 const Input = ({ onChange, value, label }) => {
   return (
-    <div>
-      <InputForm>
-        <label htmlFor="input-form" className="input-label">
-          {label}
-        </label>
-        <input
-          type="text"
-          className="input"
-          id="input-form"
-          value={value === 0 ? "" : value}
-          onChange={e => onChange(e.target.value)}
-        ></input>
-      </InputForm>
-    </div>
+    <InputForm>
+      <label htmlFor="input-form" className="input-label">
+        {label}
+      </label>
+      <input
+        type="text"
+        className="input"
+        id="input-form"
+        value={value === 0 ? "" : value}
+        onChange={e => onChange(e.target.value)}
+      ></input>
+    </InputForm>
   );
 };
 

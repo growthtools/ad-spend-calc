@@ -14,7 +14,7 @@ const StrategyCalls = ({ inputs, handleInput, completion }) => {
       <h2>Strategy Calls</h2>
 
       <RadioContainer>
-        <label htmlFor="have_sales_call" className="input-form__label">
+        <label htmlFor="have_sales_call">
           Have a strategy call?
         </label>
         <RadioButton
@@ -58,5 +58,9 @@ const RadioContainer = styled.div`
   margin-bottom: 2rem;
   label {
     flex-basis: 100%;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #263238;
+    font-size: 16px;
   }
 `;
