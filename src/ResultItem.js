@@ -36,7 +36,7 @@ const Item = styled.div`
   padding: 1rem 0 1.5rem;
 
   .completed {
-    padding-right: .5rem;
+    padding-right: 0.5rem;
   }
   .label {
     vertical-align: top;
@@ -49,25 +49,26 @@ const Item = styled.div`
     float: right;
   }
   p {
-    color: #78909C;
-    margin: 0 0 .5rem 2rem;
+    color: #78909c;
+    margin: 0 0 0.5rem 2rem;
     font-size: 12px;
     font-style: italic;
     line-height: 16px;
     max-width: 181px;
   }
-    &:not(:first-of-type)::before {
+  &:not(:first-of-type)::before {
     content: " ";
     position: absolute;
-    top: -.5rem;
+    top: -0.5rem;
     left: -24px;
     height: 1px;
     width: 112%;
     background-color: #0e143e;
     filter: contrast(80%);
   }
-  &:nth-of-type(1n+8)  {
-    .value, .label {
+  &:nth-of-type(1n + 8) {
+    .value,
+    .label {
       font-weight: 900;
     }
   }
