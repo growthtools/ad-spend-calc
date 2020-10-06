@@ -71,22 +71,22 @@ const Results = ({
     {
       completed: isComplete(completion, "cpc"),
       label: "Ad spend required",
-      value: totalAdSpend.toFixed(2).toString(),
+      value: asCurrency(totalAdSpend),
     },
     {
       completed: isComplete(completion, "cpc"),
       label: "Cost per strategy call",
-      value: eachCallCost.toFixed(2).toString(),
+      value: asCurrency(eachCallCost),
     },
     {
       completed: isComplete(completion, "salePrice"),
       label: "Total revenue",
-      value: actualRevenue.toFixed(2).toString(),
+      value: asCurrency(actualRevenue),
     },
     {
       completed: isComplete(completion, "cpc"),
       label: "Return on ad spend (ROAS)",
-      value: roas.toFixed(2).toString(),
+      value: asCurrency(roas),
     },
   ];
 
@@ -149,3 +149,6 @@ const ResultHeader = styled.h2`
   text-align: center;
   text-transform: uppercase;
 `;
+
+const asCurrency = num =>
+  num.toLocaleString("en", { minimumFractionDigits: 2 });
