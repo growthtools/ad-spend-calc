@@ -115,22 +115,23 @@ Results.propTypes = {
 
 export default Results;
 
-const salesRequired = (revGoal, salePrice) => revGoal / salePrice;
+const salesRequired = (revGoal, salePrice) => Math.ceil(revGoal / salePrice);
 const preNoShowSalesCallsNeeded = (salesRequired, salesCallConversionRate) =>
-  salesRequired / salesCallConversionRate;
+  Math.ceil(salesRequired / salesCallConversionRate);
 const salesCallesNeeded = (preCount, cancellationRate) =>
-  preCount / (1 - cancellationRate);
+  Math.ceil(preCount / (1 - cancellationRate));
 const registrantsNeeded = (salesCallCount, callBookingConversionRate) =>
-  salesCallCount / callBookingConversionRate;
+  Math.ceil(salesCallCount / callBookingConversionRate);
 const landingPageViewsNeeded = (
   registrantCount,
   registrationPageConversionRate
-) => registrantCount / registrationPageConversionRate;
-const reachRequired = (landingPageViews, ctr) => landingPageViews / ctr;
+) => Math.ceil(registrantCount / registrationPageConversionRate);
+const reachRequired = (landingPageViews, ctr) =>
+  Math.ceil(landingPageViews / ctr);
 const adSpendRequired = (landingPageViews, cpc) => landingPageViews * cpc;
 const costPerCall = (adSpend, callsNeeded) => adSpend / callsNeeded;
 const totalRevenue = (salePrice, sales) => salePrice * sales;
-const returnOnAdSpend = (totalRevenue, adSpend) => totalRevenue / adSpend;
+const returnOnAdSpend = (rev, adSpend) => rev / adSpend;
 
 const ResultCard = styled.div`
   background-color: #0e143e;
