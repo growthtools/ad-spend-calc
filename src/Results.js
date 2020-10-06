@@ -85,8 +85,9 @@ const Results = ({
     },
     {
       completed: isComplete(completion, "cpc"),
-      label: "Return on ad spend (ROAS)",
+      label: "ROAS",
       value: asCurrency(roas),
+      description: "Return on ad spend",
     },
   ];
 
