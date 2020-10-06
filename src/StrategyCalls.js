@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import PropTypes from "prop-types";
 
 import Input from "./Input.js";
@@ -12,7 +13,7 @@ const StrategyCalls = ({ inputs, handleInput, completion }) => {
     <InputWrapper isComplete={isComplete(completion, "cancellationRate")}>
       <h2>Strategy Calls</h2>
 
-      <div className="input-form">
+      <RadioContainer>
         <label htmlFor="have_sales_call" className="input-form__label">
           Have a strategy call?
         </label>
@@ -22,7 +23,7 @@ const StrategyCalls = ({ inputs, handleInput, completion }) => {
           options={["Yes", "No"]}
           onChange={v => handleInput("haveSalesCall")(v === "Yes")}
         />
-      </div>
+      </RadioContainer>
       <Input
         type="percentage"
         value={inputs.salesCallConversionRate}
@@ -50,3 +51,12 @@ StrategyCalls.propTypes = {
 };
 
 export default StrategyCalls;
+
+const RadioContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  label {
+    flex-basis: 100%;
+  }
+`;

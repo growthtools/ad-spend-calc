@@ -31,13 +31,10 @@ RadioButton.propTypes = {
 export default RadioButton;
 
 const RadioButtonWrapper = styled.div`
-  display: flex;
-  align-items: center;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
   position: relative;
   padding-left: 35px;
-  margin-left: 0.5rem;
   cursor: pointer;
   user-select: none;
 
@@ -62,19 +59,19 @@ const RadioButtonWrapper = styled.div`
     left: 0;
     height: 24px;
     width: 24px;
-    background-color: rgba(140, 198, 63, 0.15);
+    background-color: rgba(44, 216, 134, 0.15);
     border-radius: 50%;
-    border: 1px solid #8cc63f;
+    border: 1px solid #2cd886;
   }
 
   // on mouse-over, add a green background color
   &:hover input ~ .checkmark {
-    background-color: rgba(140, 198, 63, 0.35);
+    background-color: rgba(44, 216, 134, 0.35);
   }
 
   // when the radio button is checked, add a green background
   & input:checked ~ .checkmark {
-    background-color: #8cc63f;
+    background-color: #2cd886;
   }
 
   // when the radio button is focused, add a green glow
@@ -96,8 +93,8 @@ const RadioButtonWrapper = styled.div`
 
   /* style the dot/circle */
   .container .checkmark:after {
-    top: 6px;
-    left: 6px;
+    top: 7px;
+    left: 7px;
     width: 10px;
     height: 10px;
     border-radius: 50%;
