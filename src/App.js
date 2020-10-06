@@ -67,14 +67,13 @@ const MainContent = styled.div`
   grid-template-columns: 1fr 1fr;
 
   .col:first-of-type {
-    margin-top: 1.5rem;
     h2 {
       color: #161f5d;
       font-family: Times, serif;
       font-size: 2rem;
       font-weight: 900;
       letter-spacing: 1px;
-      line-height: 2.375rem;
+      line-height: 1.75rem;
       margin: 1.5rem 0;
 
       &:first-child {

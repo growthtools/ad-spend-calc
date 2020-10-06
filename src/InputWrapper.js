@@ -19,7 +19,7 @@ const InputWrapper = styled.div`
 
     position: absolute;
     left: -13.5px;
-    top: 5px;
+    top: 0;
 
     border-radius: 50%;
     background-color: ${p => (p.isComplete ? "#17DA5E" : "#ECEFF1")};
