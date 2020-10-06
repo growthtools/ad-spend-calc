@@ -20,13 +20,11 @@ function App() {
     setInputs(draft => {
       draft[field] = v;
     });
-    console.log(field);
     setCompletion(newCompletionFor(completion, field));
   };
 
   return (
     <div className="App">
-      {completion}
       <Header />
       <MainContent>
         <div className="col">
