@@ -32,7 +32,7 @@ const InputForm = styled.div`
   margin-bottom: 2rem;
 
   &::before {
-    content: ${p => (p.inputType == "percentage" ? "'%'" : "'$'")};
+    content: ${p => (p.inputType === "percentage" ? "'%'" : "'$'")};
     position: absolute;
     height: 46px;
     width: 33px;
