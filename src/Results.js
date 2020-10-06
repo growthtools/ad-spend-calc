@@ -154,4 +154,7 @@ const ResultHeader = styled.h2`
 `;
 
 const asCurrency = num =>
-  num.toLocaleString("en", { minimumFractionDigits: 2 });
+  num.toLocaleString("en", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
