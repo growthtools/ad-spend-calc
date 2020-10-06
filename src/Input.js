@@ -5,9 +5,9 @@ import PropTypes from "prop-types";
 const Input = ({ onChange, value, label }) => {
   return (
     <InputForm>
-      <label htmlFor="input-form" className="input-label">
+      <div className="input-label">
         {label}
-      </label>
+      </div>
       <input
         type="text"
         className="input"
@@ -36,7 +36,7 @@ const InputForm = styled.div`
     position: absolute;
     height: 46px;
     width: 33px;
-    top: 24px;
+    top: 32px;
     left: -15px;
     border-radius: 5px 0 0 5px;
     background-color: #eceff1;
