@@ -20,13 +20,11 @@ function App() {
     setInputs(draft => {
       draft[field] = v;
     });
-    console.log(field);
     setCompletion(newCompletionFor(completion, field));
   };
 
   return (
     <div className="App">
-      {completion}
       <Header />
       <MainContent>
         <div className="col">
@@ -59,7 +57,7 @@ const industryStandards = {
 
 const MainContent = styled.div`
   margin: -5.5rem auto 5rem;
-  padding: 2.5rem;
+  padding: 5rem 2.5rem 2.5rem;
   max-width: 888px;
   border-radius: 12px;
   background-color: #ffffff;
@@ -83,5 +81,9 @@ const MainContent = styled.div`
         margin-top: 0;
       }
     }
+  }
+
+  .col:last-of-type {
+    margin-top: -2.4rem;
   }
 `;

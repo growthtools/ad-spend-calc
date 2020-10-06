@@ -9,10 +9,7 @@ import { isComplete } from "./completion";
 const RevenueGoals = ({ inputs, handleInput, completion }) => {
   return (
     <InputWrapper isComplete={isComplete(completion, "salePrice")}>
-      <h2>
-        Revenue goals {isComplete(completion, "salePrice") ? "t" : "f"} -{" "}
-        {completion}
-      </h2>
+      <h2>Revenue goals</h2>
       <Input
         type="number"
         value={inputs.revenueTarget}
