@@ -5,9 +5,7 @@ import PropTypes from "prop-types";
 const Input = ({ onChange, value, label, type }) => {
   return (
     <InputForm inputType={type}>
-      <div className="input-label">
-        {label}
-      </div>
+      <div className="input-label">{label}</div>
       <input
         type="text"
         className="input"
@@ -23,6 +21,7 @@ Input.propTypes = {
   onChange: PropTypes.func.isRequired,
   value: PropTypes.number.isRequired,
   label: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
 };
 
 export default Input;
@@ -85,4 +84,4 @@ const InputForm = styled.div`
       border-color: #b0bec5;
     }
   }
-`; 
+`;
