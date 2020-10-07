@@ -14,9 +14,7 @@ const StrategyCalls = ({ inputs, handleInput, completion }) => {
       <h2>Strategy Calls</h2>
 
       <RadioContainer>
-        <label htmlFor="have_sales_call">
-          Have a strategy call?
-        </label>
+        <label htmlFor="have_sales_call">Have a strategy call?</label>
         <RadioButton
           id="have_sales_call"
           value={inputs.haveSalesCall ? "Yes" : "No"}
