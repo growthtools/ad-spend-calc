@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const Input = ({ onChange, value, label, type }) => {
   return (
-    <InputForm inputType={type}>
+    <InputForm inputType={type} value={value}>
       <div className="input-label">{label}</div>
       <input
         type="text"
@@ -51,7 +51,8 @@ const InputForm = styled.div`
     color: #b0bec5;
     font-size: 12px;
     top: 48px;
-    left: 76px; 
+    left: ${p =>
+      p.value ? (p.value.toString().length + 3) * 10 + "px" : "0px"};
   }
   .input-label {
     font-weight: 500;
