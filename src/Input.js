@@ -3,8 +3,31 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const Input = ({ onChange, value, label, type }) => {
+
+  const calculateOffset = () => {
+    const num = Array.from(String(value), Number);
+    let sum = 0;
+    let offsetVals = {
+      0: 14.27,
+      1: 16.39,
+      2: 18.85,
+      3: 19,
+      4: 20.02,
+      5: 19.05,
+      6: 18.25,
+      7: 16.03,
+      8: 18.58,
+      9: 18.26,
+    }
+    num.map((ea) => {
+      sum += offsetVals[ea];
+    })
+    return sum
+  }
+  const pixels = calculateOffset();
+
   return (
-    <InputForm inputType={type} value={value}>
+    <InputForm inputType={type} positionOffset={pixels}>
       <div className="input-label">{label}</div>
       <input
         type="text"
@@ -51,7 +74,7 @@ const InputForm = styled.div`
     color: #b0bec5;
     font-size: 12px;
     top: 48px;
-    left: ${p => p.value ? (p.value.toString().length + 4) * 8 + "px" : "0px"};
+    left: ${p => p.positionOffset + "px"};
   }
   .input-label {
     font-weight: 500;
