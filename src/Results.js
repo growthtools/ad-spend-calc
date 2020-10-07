@@ -27,7 +27,7 @@ const Results = ({
     cancellationRate
   );
   const registrantCount = registrantsNeeded(
-    totalsSalesCallCount,
+    haveSalesCall ? totalsSalesCallCount : salesReq,
     callBookingConversionRate
   );
   const landingViews = landingPageViewsNeeded(
@@ -48,8 +48,9 @@ const Results = ({
     },
     {
       completed: isComplete(completion, "cancellationRate"),
-      label: "Sales calls needed",
+      label: "Strategy calls needed",
       value: Math.ceil(totalsSalesCallCount).toLocaleString("en"),
+      show: haveSalesCall,
     },
     {
       completed: isComplete(completion, "callBookingConversionRate"),
@@ -77,6 +78,7 @@ const Results = ({
       completed: isComplete(completion, "cpc"),
       label: "Cost per strategy call",
       value: asCurrency(eachCallCost),
+      show: haveSalesCall,
     },
     {
       completed: isComplete(completion, "salePrice"),

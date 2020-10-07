@@ -1,6 +1,5 @@
 export const newCompletionFor = (currentCompletion, field) => {
   const newCompletion = completionFor(field);
-  console.log(field, newCompletion);
 
   if (newCompletion < currentCompletion) {
     return currentCompletion;

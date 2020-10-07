@@ -5,7 +5,11 @@ import styled from "styled-components";
 import CheckGreen from "./check-green.svg";
 import CheckGrey from "./check-grey.svg";
 
-const ResultItem = ({ completed, label, value, description }) => {
+const ResultItem = ({ completed, label, value, description, show }) => {
+  if (!show) {
+    return null;
+  }
+
   return (
     <Item completed={completed}>
       <span className="completed">
@@ -27,6 +31,11 @@ ResultItem.propTypes = {
   label: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   description: PropTypes.string,
+  show: PropTypes.bool,
+};
+
+ResultItem.defaultProps = {
+  show: true,
 };
 
 export default ResultItem;
