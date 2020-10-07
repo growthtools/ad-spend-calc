@@ -45,6 +45,14 @@ const InputForm = styled.div`
     line-height: 44px;
     text-align: center;
   }
+  &::after {
+    content: ${p => (p.inputType === "percentage" ? "''" : "'.00'")};
+    position: absolute;
+    color: #b0bec5;
+    font-size: 12px;
+    top: 48px;
+    left: 76px; 
+  }
   .input-label {
     font-weight: 500;
     margin-bottom: 0.5rem;
@@ -62,11 +70,6 @@ const InputForm = styled.div`
     padding: 0;
     padding-left: 41px;
     font-size: 16px;
-
-    &::placeholder {
-      color: #b0bec5;
-      font-size: 16px;
-    }
 
     &:focus {
       border-color: #8cc63f;
