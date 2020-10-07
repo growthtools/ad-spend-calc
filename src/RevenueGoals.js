@@ -15,6 +15,7 @@ const RevenueGoals = ({ inputs, handleInput, completion }) => {
         value={inputs.revenueTarget}
         onChange={asFloat(handleInput("revenueTarget"))}
         label="Revenue target"
+        focus={true}
       />
       <Input
         type="number"

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const Input = ({ onChange, value, label, type }) => {
+const Input = ({ onChange, value, label, type, focus }) => {
   return (
     <InputForm inputType={type}>
       <div className="input-label">{label}</div>
@@ -12,6 +12,8 @@ const Input = ({ onChange, value, label, type }) => {
         id="input-form"
         value={value === 0 ? "" : value}
         onChange={e => onChange(e.target.value)}
+        autoFocus={focus}
+        onFocus={e => e.currentTarget.select()}
       ></input>
     </InputForm>
   );
@@ -22,6 +24,11 @@ Input.propTypes = {
   value: PropTypes.number.isRequired,
   label: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
+  focus: PropTypes.bool,
+};
+
+Input.defaultProps = {
+  focus: false,
 };
 
 export default Input;
