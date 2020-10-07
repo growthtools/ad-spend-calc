@@ -21,6 +21,7 @@ const Input = ({ onChange, value, label, type }) => {
     }
     num.map((ea) => {
       sum += offsetVals[ea];
+      return
     })
     return sum
   }
