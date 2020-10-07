@@ -13,6 +13,7 @@ const Input = ({ onChange, value, label, type, focus }) => {
         value={value === 0 ? "" : value}
         onChange={e => onChange(e.target.value)}
         autoFocus={focus}
+        onFocus={e => e.currentTarget.select()}
       ></input>
     </InputForm>
   );
