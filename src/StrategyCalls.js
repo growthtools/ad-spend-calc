@@ -21,7 +21,9 @@ const StrategyCalls = ({ inputs, handleInput, completion }) => {
           id="have_sales_call"
           value={inputs.haveSalesCall ? "Yes" : "No"}
           options={["Yes", "No"]}
-          onChange={v => handleInput("haveSalesCall")(v === "Yes")}
+          onChange={e =>
+            handleInput("haveSalesCall")(e.target.value === "Yes")
+          }
         />
       </RadioContainer>
       <Input
