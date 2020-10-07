@@ -12,7 +12,7 @@ const CostPerClick = ({ inputs, handleInput, completion }) => {
       <h2>Cost per click</h2>
 
       <Input
-        type="percentage"
+        type="number"
         value={inputs.cpc}
         onChange={asFloat(handleInput("cpc"))}
         label="Estimated CPC"

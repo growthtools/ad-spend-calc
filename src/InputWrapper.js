@@ -7,7 +7,7 @@ const InputWrapper = styled.div`
   position: relative;
 
   &:not(:last-child) {
-    padding-bottom: 5.5rem;
+    padding-bottom: 4rem;
   }
 
   &:last-child {

@@ -20,13 +20,11 @@ function App() {
     setInputs(draft => {
       draft[field] = v;
     });
-    console.log(field);
     setCompletion(newCompletionFor(completion, field));
   };
 
   return (
     <div className="App">
-      {completion}
       <Header />
       <MainContent>
         <div className="col">
@@ -59,7 +57,7 @@ const industryStandards = {
 
 const MainContent = styled.div`
   margin: -5.5rem auto 5rem;
-  padding: 2.5rem;
+  padding: 5rem 2.5rem 2.5rem;
   max-width: 888px;
   border-radius: 12px;
   background-color: #ffffff;
@@ -68,17 +66,23 @@ const MainContent = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  h2 {
-    color: #161f5d;
-    font-family: Times, serif;
-    font-size: 2rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-    line-height: 2.375rem;
-    margin: 1.5rem 0;
+  .col:first-of-type {
+    h2 {
+      color: #161f5d;
+      font-family: Times, serif;
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      line-height: 1.75rem;
+      margin: 1.5rem 0;
 
-    &:first-child {
-      margin-top: 0;
+      &:first-child {
+        margin-top: 0;
+      }
     }
+  }
+
+  .col:last-of-type {
+    margin-top: -2.4rem;
   }
 `;
