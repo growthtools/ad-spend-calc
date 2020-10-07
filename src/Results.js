@@ -27,7 +27,7 @@ const Results = ({
     cancellationRate
   );
   const registrantCount = registrantsNeeded(
-    totalsSalesCallCount,
+    haveSalesCall ? totalsSalesCallCount : salesReq,
     callBookingConversionRate
   );
   const landingViews = landingPageViewsNeeded(
