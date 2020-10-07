@@ -51,8 +51,7 @@ const InputForm = styled.div`
     color: #b0bec5;
     font-size: 12px;
     top: 48px;
-    left: ${p =>
-      p.value ? (p.value.toString().length + 3) * 10 + "px" : "0px"};
+    left: ${p => p.value ? (p.value.toString().length + 4) * 8 + "px" : "0px"};
   }
   .input-label {
     font-weight: 500;
