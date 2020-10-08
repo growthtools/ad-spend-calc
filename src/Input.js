@@ -17,27 +17,12 @@ const Input = ({ onChange, value, label, type }) => {
   );
 };
 
-const calculateOffset = (value) => {
-  let theArray = Array.from(String(value), Number);
-
-  let offsetVals = {
-    0: 14.27,
-    1: 16.39,
-    2: 18.85,
-    3: 19,
-    4: 20.02,
-    5: 19.05,
-    6: 18.25,
-    7: 16.03,
-    8: 18.58,
-    9: 18.26,
-  }
-
-  function myFunc(total, num) {
-    return total + offsetVals[num];
-  }
-  return theArray.reduce(myFunc);
-}
+const calculateOffset = value => {
+  return Array.from(String(value), Number).reduce(
+    (total, num) => total + 9,
+    30
+  );
+};
 
 Input.propTypes = {
   onChange: PropTypes.func.isRequired,
