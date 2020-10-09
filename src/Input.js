@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
@@ -6,6 +6,8 @@ const offsetBase = 30; // px
 const digitWidth = 9; // px
 
 const Input = ({ onChange, value, label, type, focus }) => {
+  const [focused, setFocus] = useState(focus);
+
   return (
     <InputForm inputType={type} positionOffset={calculateOffset(value)}>
       <label htmlFor={label}>{label}</label>
@@ -17,7 +19,11 @@ const Input = ({ onChange, value, label, type, focus }) => {
         value={value === 0 ? "" : value}
         onChange={e => onChange(e.target.value)}
         autoFocus={focus}
-        onFocus={e => e.currentTarget.select()}
+        onFocus={e => {
+          e.currentTarget.select();
+          setFocus(true);
+        }}
+        onBlur={() => setFocus(false)}
       ></input>
     </InputForm>
   );
