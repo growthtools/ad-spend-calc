@@ -16,12 +16,14 @@ const RevenueGoals = ({ inputs, handleInput, completion }) => {
         onChange={asFloat(handleInput("revenueTarget"))}
         label="Revenue target"
         focus={true}
+        tooltip="This is the amount of revenue you'd like to collect."
       />
       <Input
         type="number"
         value={inputs.salePrice}
         onChange={asFloat(handleInput("salePrice"))}
         label="Average cost per sale"
+        tooltip="This is the average price of your product(s)."
       />
     </InputWrapper>
   );
