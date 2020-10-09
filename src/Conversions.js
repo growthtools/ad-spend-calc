@@ -18,12 +18,14 @@ const Conversions = ({ inputs, handleInput, completion }) => {
         value={inputs.callBookingConversionRate}
         onChange={asFloat(handleInput("callBookingConversionRate"))}
         label="Booking page conversion rate"
+        tooltip="Percentage of optins that register for a strategy call."
       />
       <Input
         type="percentage"
         value={inputs.registrationPageConversionRate}
         onChange={asFloat(handleInput("registrationPageConversionRate"))}
         label="Registration page conversion rate"
+        tooltip="Percentage of registration page views that opt-in."
       />
     </InputWrapper>
   );
