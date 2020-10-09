@@ -10,6 +10,7 @@ import StrategyCalls from "./StrategyCalls";
 import Conversions from "./Conversions";
 import CostPerClick from "./CostPerClick";
 import Results from "./Results";
+import AlertIcon from "./alert.svg";
 import { newCompletionFor } from "./completion";
 
 function App() {
@@ -35,6 +36,14 @@ function App() {
         </div>
         <div className="col">
           <Results {...inputs} completion={completion} />
+          <Disclaimer>
+            <img alt="Alert" aria-hidden="true" src={AlertIcon} />
+            <p>
+              <strong>All results above are estimates.</strong> These
+              calculations are for informational purposes and do not guarantee
+              results.
+            </p>
+          </Disclaimer>
         </div>
       </MainContent>
     </div>
@@ -84,5 +93,24 @@ const MainContent = styled.div`
 
   .col:last-of-type {
     margin-top: -2.4rem;
+  }
+`;
+
+const Disclaimer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+
+  p {
+    margin-top: 0.25rem;
+    padding: 0 2rem;
+    max-width: 290px;
+    color: #263238;
+    font-size: 12px;
+    text-align: center;
+    strong {
+      font-weight: 500;
+    }
   }
 `;
