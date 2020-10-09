@@ -1,29 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const Input = ({ onChange, value, label, type, focus }) => {
+import Tooltip from "./Tooltip";
+
+const offsetBase = 30; // px
+const digitWidth = 9; // px
+
+const Input = ({ onChange, value, label, type, focus, tooltip }) => {
+  const [focused, setFocus] = useState(focus);
+
   return (
     <InputForm inputType={type} positionOffset={calculateOffset(value)}>
-      <div className="input-label">{label}</div>
+      <label htmlFor={label}>{label}</label>
       <input
         type="text"
         className="input"
-        id="input-form"
+        id={label}
+        name={label}
         value={value === 0 ? "" : value}
         onChange={e => onChange(e.target.value)}
         autoFocus={focus}
-        onFocus={e => e.currentTarget.select()}
+        onFocus={e => {
+          e.currentTarget.select();
+          setFocus(true);
+        }}
+        onBlur={() => setFocus(false)}
       ></input>
+      {tooltip && focused && <Tooltip>{tooltip}</Tooltip>}
     </InputForm>
   );
 };
 
-const calculateOffset = value => {
-  return Array.from(String(value), Number).reduce(
-    (total, num) => total + 9,
-    30
-  );
+export const calculateOffset = value => {
+  return offsetBase + String(value).length * digitWidth;
 };
 
 Input.propTypes = {
@@ -32,10 +42,12 @@ Input.propTypes = {
   label: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   focus: PropTypes.bool,
+  tooltip: PropTypes.string,
 };
 
 Input.defaultProps = {
   focus: false,
+  tooltip: "",
 };
 
 export default Input;
@@ -67,11 +79,12 @@ const InputForm = styled.div`
     top: 48px;
     left: ${p => p.positionOffset + "px"};
   }
-  .input-label {
-    font-weight: 500;
+  label {
+    display: block;
     margin-bottom: 0.5rem;
-    color: #263238;
+    font-weight: 500;
     font-size: 16px;
+    color: #263238;
   }
   .input {
     width: 100%;
@@ -88,7 +101,7 @@ const InputForm = styled.div`
     &:focus {
       border-color: #8cc63f;
       border-radius: 6px;
-      box-shadow: 0 0 0 8px rgba(140, 198, 63, 0.3);
+      box-shadow: 0 0 0 8px rgba(44, 216, 134, 0.3);
       outline: none;
     }
     &:hover {
