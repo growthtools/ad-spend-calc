@@ -23,10 +23,7 @@ const Input = ({ onChange, value, label, type, focus }) => {
 };
 
 export const calculateOffset = value => {
-  return Array.from(String(value), Number).reduce(
-    (total, num) => total + digitWidth,
-    offsetBase
-  );
+  return offsetBase + String(value).length * digitWidth;
 };
 
 Input.propTypes = {
