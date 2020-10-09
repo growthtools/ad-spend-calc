@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
+const offsetBase = 30; // px
+const digitWidth = 9; // px
+
 const Input = ({ onChange, value, label, type, focus }) => {
   return (
     <InputForm inputType={type} positionOffset={calculateOffset(value)}>
@@ -21,8 +24,8 @@ const Input = ({ onChange, value, label, type, focus }) => {
 
 const calculateOffset = value => {
   return Array.from(String(value), Number).reduce(
-    (total, num) => total + 9,
-    30
+    (total, num) => total + digitWidth,
+    offsetBase
   );
 };
 
