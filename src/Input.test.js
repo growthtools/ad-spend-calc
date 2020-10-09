@@ -1,5 +1,21 @@
 /*globals test expect */
-import { calculateOffset } from "./Input";
+import React from "react";
+import { render } from "@testing-library/react";
+import Input, { calculateOffset } from "./Input";
+
+const defaultProps = {
+  onChange: () => {},
+  value: 1000,
+  label: "Sale price",
+  type: "currency",
+  focus: false,
+};
+
+test("renders the label", () => {
+  const { getByText } = render(<Input {...defaultProps} />);
+  const labelElm = getByText(new RegExp(defaultProps.label));
+  expect(labelElm).toBeInTheDocument();
+});
 
 test("calculates offset for empty value", () => {
   const actual = calculateOffset("");
