@@ -101,7 +101,7 @@ const InputForm = styled.div`
     &:focus {
       border-color: #8cc63f;
       border-radius: 6px;
-      box-shadow: 0 0 0 8px rgba(140, 198, 63, 0.3);
+      box-shadow: 0 0 0 8px rgba(44, 216, 134, 0.3);
       outline: none;
     }
     &:hover {
