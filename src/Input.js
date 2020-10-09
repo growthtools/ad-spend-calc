@@ -8,11 +8,12 @@ const digitWidth = 9; // px
 const Input = ({ onChange, value, label, type, focus }) => {
   return (
     <InputForm inputType={type} positionOffset={calculateOffset(value)}>
-      <div className="input-label">{label}</div>
+      <label htmlFor={label}>{label}</label>
       <input
         type="text"
         className="input"
-        id="input-form"
+        id={label}
+        name={label}
         value={value === 0 ? "" : value}
         onChange={e => onChange(e.target.value)}
         autoFocus={focus}
@@ -67,11 +68,12 @@ const InputForm = styled.div`
     top: 48px;
     left: ${p => p.positionOffset + "px"};
   }
-  .input-label {
-    font-weight: 500;
+  label {
+    display: block;
     margin-bottom: 0.5rem;
-    color: #263238;
+    font-weight: 500;
     font-size: 16px;
+    color: #263238;
   }
   .input {
     width: 100%;
