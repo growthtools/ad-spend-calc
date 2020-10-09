@@ -22,7 +22,7 @@ const Input = ({ onChange, value, label, type, focus }) => {
   );
 };
 
-const calculateOffset = value => {
+export const calculateOffset = value => {
   return Array.from(String(value), Number).reduce(
     (total, num) => total + digitWidth,
     offsetBase
