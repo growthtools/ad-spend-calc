@@ -29,12 +29,14 @@ const StrategyCalls = ({ inputs, handleInput, completion }) => {
         value={inputs.salesCallConversionRate}
         onChange={asFloat(handleInput("salesCallConversionRate"))}
         label="Sales call conversion rate"
+        tooltip="Percentage of strategy calls that end in a sale."
       />
       <Input
         type="percentage"
         value={inputs.cancellationRate}
         onChange={asFloat(handleInput("cancellationRate"))}
         label="Estimated no show/cancellation rate"
+        tooltip="Percentage of scheduled strategy calls that get cancelled or are no shows."
       />
     </InputWrapper>
   );
