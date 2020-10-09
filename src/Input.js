@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
+import Tooltip from "./Tooltip";
+
 const offsetBase = 30; // px
 const digitWidth = 9; // px
 
-const Input = ({ onChange, value, label, type, focus }) => {
+const Input = ({ onChange, value, label, type, focus, tooltip }) => {
   const [focused, setFocus] = useState(focus);
 
   return (
@@ -25,6 +27,7 @@ const Input = ({ onChange, value, label, type, focus }) => {
         }}
         onBlur={() => setFocus(false)}
       ></input>
+      {tooltip && focused && <Tooltip>{tooltip}</Tooltip>}
     </InputForm>
   );
 };
@@ -39,10 +42,12 @@ Input.propTypes = {
   label: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   focus: PropTypes.bool,
+  tooltip: PropTypes.string,
 };
 
 Input.defaultProps = {
   focus: false,
+  tooltip: "",
 };
 
 export default Input;
