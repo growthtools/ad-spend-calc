@@ -19,7 +19,7 @@ export default Tooltip;
 
 const Wrapper = styled.div`
   position: absolute;
-  top: 5.3rem;
+  top: 6rem;
   left: -1rem;
   width: calc(100% - 2rem);
   z-index: 1;
@@ -28,7 +28,19 @@ const Wrapper = styled.div`
 
   background: white;
   border-radius: 0.375rem;
-  box-shadow: 0 0.125rem 1.25rem 0 rgba(0, 0, 0, 0.1);
+  filter: drop-shadow(0 0.125rem 1.25rem rgba(0, 0, 0, 0.1));
+
+  &:before {
+    content: " ";
+    position: absolute;
+    top: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border-right: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid white;
+    border-left: 0.5rem solid transparent;
+  }
 `;
 
 const Header = styled.h4`
