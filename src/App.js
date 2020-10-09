@@ -42,7 +42,11 @@ function App() {
               aria-hidden="true"
               src={AlertIcon}
             />
-            <p><strong>All results above are estimates.</strong> Those are for informational purposes and do not guarantee results.</p>
+            <p>
+              <strong>All results above are estimates.</strong> These
+              calculations are for informational purposes and do not guarantee
+              results.
+            </p>
           </Disclaimer>
         </div>
       </MainContent>
