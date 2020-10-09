@@ -37,11 +37,7 @@ function App() {
         <div className="col">
           <Results {...inputs} completion={completion} />
           <Disclaimer>
-            <img
-              alt="Alert"
-              aria-hidden="true"
-              src={AlertIcon}
-            />
+            <img alt="Alert" aria-hidden="true" src={AlertIcon} />
             <p>
               <strong>All results above are estimates.</strong> These
               calculations are for informational purposes and do not guarantee
@@ -107,7 +103,7 @@ const Disclaimer = styled.div`
   margin-top: 1.5rem;
 
   p {
-    margin-top: .25rem;
+    margin-top: 0.25rem;
     padding: 0 2rem;
     max-width: 290px;
     color: #263238;
