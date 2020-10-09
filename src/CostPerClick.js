@@ -16,12 +16,14 @@ const CostPerClick = ({ inputs, handleInput, completion }) => {
         value={inputs.cpc}
         onChange={asFloat(handleInput("cpc"))}
         label="Estimated CPC"
+        tooltip="The estimated Cost Per ad Click for your ad campaign."
       />
       <Input
         type="percentage"
         value={inputs.ctr}
         onChange={asFloat(handleInput("ctr"))}
         label="Estimated ad CTR"
+        tooltip="The estimated Click-Through Rate on your ads."
       />
     </InputWrapper>
   );
