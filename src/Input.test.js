@@ -17,6 +17,25 @@ test("renders the label", () => {
   expect(labelElm).toBeInTheDocument();
 });
 
+test("displays the tooltip on focus", () => {
+  const tipContent = "I'm here to help.";
+  const { getByLabelText, queryByText } = render(
+    <Input {...defaultProps} tooltip={tipContent} />
+  );
+  getByLabelText(defaultProps.label).focus();
+  const tooltipElm = queryByText(new RegExp(tipContent));
+  expect(tooltipElm).toBeInTheDocument();
+});
+
+test("hides the tooltip on blur", () => {
+  const tipContent = "I'm here to help.";
+  const { queryByText } = render(
+    <Input {...defaultProps} tooltip={tipContent} />
+  );
+  const tooltipElm = queryByText(new RegExp(tipContent));
+  expect(tooltipElm).not.toBeInTheDocument();
+});
+
 test("calculates offset for empty value", () => {
   const actual = calculateOffset("");
   expect(actual).toEqual(30);
