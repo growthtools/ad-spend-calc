@@ -24,17 +24,25 @@ const Averages = ({ type }) => {
   ]
 
   const highAvgRows = (avgsArray) => {
+    let row = [];
     avgsArray.forEach((obj) => {
       Object.keys(obj).forEach((key) => {
-        return (
-          <div>key<span>obj[key]</span></div>
-        )
+        row.push(<div>{key}<span>{obj[key]}</span></div>)
       })
     })
+    return (
+      <div>{row}</div>
+    )
   }
 
-  console.log(highAvgRows(lowAvgs));
-  let rows = "words";
+  let rows = "";
+  if (type === "low") {
+    rows = highAvgRows(lowAvgs);
+  }
+  if (type === "high") {
+    rows = highAvgRows(highAvgs);
+  }
+
   return (
     <List>
       {rows}
