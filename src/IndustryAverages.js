@@ -1,88 +1,36 @@
 import React from "react";
 import styled from "styled-components";
 
-const highAvgs = [
-  { "Top of funnel CTR": "1%" },
-  { "Middle/bottom of funnel CTR": "2 - 4%" },
-  { "Webinar optin page conversion rate": "20%" },
-  { "Live webinar attendee rate": "10%" },
-  { "Live webinar conversion rate to booked call": "5%" },
-  { "Evergreen webinar attendee rate": "60%" },
-  { "Evergreen webinar conversion rate to booked call": "5%" },
-  { "Email open rate": "2%" }
-]
-
-const lowAvgs = [
-  { "Top of funnel CTR": "1%" },
-  { "Middle/bottom of funnel CTR": "2 - 4%" },
-  { "Lead magnet optin page conversion rate": "20%" },
-  { "Webinar attendee rate": "5 - 20%" },
-  { "Sales page add-to-cart rate": "16 - 20%" },
-  { "Sales page conversion rate": "5%" },
-  { "Email open rate": "2%" }
-]
-
 const IndustryAverages = () => {
   return (
     <IndustryAveragesContent>
       <h2>Industry averages</h2>
       <div className="col">
         <h3>High ticket webinar coaching stats</h3>
-        <table>
-          <tr>
-            <td>Top of funnel CTR</td><td>1</td>
-          </tr>
-          <tr>
-            <td>Middle/bottom of funnel CTR</td><td>2 - 4</td>
-          </tr>
-          <tr>
-            <td>Webinar optin page conversion rate</td><td>20</td>
-          </tr>
-          <tr>
-            <td>Live webinar attendee rate</td><td>10</td>
-          </tr>
-          <tr>
-            <td>Live webinar conversion rate to booked call</td><td>5</td>
-          </tr>
-          <tr>
-            <td>Evergreen webinar attendee rate</td><td>60</td>
-          </tr>
-          <tr>
-            <td>Evergreen webinar conversion rate to booked call</td><td>5</td>
-          </tr>
-          <tr>
-            <td>Email open rate</td><td>2</td>
-          </tr>
-        </table>
+        <div className="list">
+          <div>Top of funnel CTR<span>1%</span></div>
+          <div>Middle/bottom of funnel CTR<span>2 - 4%</span></div>
+          <div>Webinar optin page conversion rate<span>20%</span></div>
+          <div>Live webinar attendee rate<span>10%</span></div>
+          <div>Live webinar conversion rate to booked call<span>5%</span></div>
+          <div>Evergreen webinar attendee rate<span>60%</span></div>
+          <div>Evergreen webinar conversion rate to booked call<span>5%</span></div>
+          <div>Email open rate<span>2%</span></div>
+        </div>
       </div>
       <div className="col">
         <h3>Low ticket webinar coaching stats</h3>
-        <table>
-          <tr>
-            <td>Top of funnel CTR</td><td>1</td>
-          </tr>
-          <tr>
-            <td>Middle/bottom of funnel CTR</td><td>2 - 4</td>
-          </tr>
-          <tr>
-            <td>Lead magnet optin page conversion rate</td><td>20</td>
-          </tr>
-          <tr>
-            <td>Webinar attendee rate</td><td>10</td>
-          </tr>
-          <tr>
-            <td>Sales page add-to-cart rate</td><td>5</td>
-          </tr>
-          <tr>
-            <td>Sales page conversion rate</td><td>60</td>
-          </tr>
-          <tr>
-            <td>Webinar attendee rate</td><td>5</td>
-          </tr>
-        </table>
-
+        <div className="list">
+          <div>Top of funnel CTR<span>1%</span></div>
+          <div>Middle/bottom of funnel CTR<span>2 - 4%</span></div>
+          <div>Lead magnet optin page conversion rate<span>20%</span></div>
+          <div>Webinar attendee rate<span>10%</span></div>
+          <div>Sales page add-to-cart rate<span>5%</span></div>
+          <div>Sales page conversion rate<span>60%</span></div>
+          <div>Webinar attendee rate<span>5%</span></div>
+        </div>
       </div>
-    </IndustryAveragesContent>
+    </IndustryAveragesContent >
   )
 }
 
@@ -97,7 +45,7 @@ const IndustryAveragesContent = styled.div`
   box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.08);
 
   display: grid;
-  grid: 72px 1fr 1fr / 1fr 1fr;
+  grid: 78px 1fr 1fr / 1fr 1fr;
 
   h2 {
     grid-column: 1/4;
@@ -109,10 +57,11 @@ const IndustryAveragesContent = styled.div`
     letter-spacing: 1px;
     line-height: 1.75rem;
     margin: 0 auto;
+    padding: .5rem 0;
 
   }
-  .col { 
-    padding: 0 1rem;
+  .col {
+    max-width: 412px;
     h3 {
       margin: 0 0 1rem 0;
       color: #263238;
@@ -121,22 +70,32 @@ const IndustryAveragesContent = styled.div`
       letter-spacing: 2px;
       text-transform: uppercase;
     }
-    table {
-      width: 100%;
+    .list {
       color: #263238;
-      font-size: 14px;
-     
-
-      tr {
-        height: 2rem;
+      > div {
+        margin-left: -1rem;
+        padding: 0 1rem;
+        font-size: 14px;
+        &:nth-child(odd) {
+          height: 40px;
+          line-height: 40px;
+        }
+        &:nth-child(even) {
+          line-height: 32px;
+          height: 32px;
+          background-color: #F9FAFA;
+        }
       }
-      td:last-of-type {
+      span {
+        float: right;
+        font-size: 14px;
+        font-weight: bold;
         text-align: right;
-        font-weight: 700;
       }
     }
   }
   .col:first-of-type {
+    padding: 0 1rem;
     grid-column: 1/2;
     grid-row: 2/4;
   }
@@ -145,5 +104,6 @@ const IndustryAveragesContent = styled.div`
     grid-column: 2/3;
     grid-row: 2/4;
     margin-left: 2rem;
+    padding: 0 0;
   }
 `;
