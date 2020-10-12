@@ -12,21 +12,16 @@ const LowAverages = () => {
     { "Email open rate": "2%" }
   ]
 
-  function makeRows() {
-    let row = [];
-    lowAvgs.forEach((obj) => {
-      Object.keys(obj).forEach((key) => {
-        row.push(<div key={key}>{key}<span>{obj[key]}</span></div>)
-      })
+  let rows = [];
+  lowAvgs.forEach((obj) => {
+    Object.keys(obj).forEach((key) => {
+      rows.push(<div key={key}>{key}<span>{obj[key]}</span></div>)
     })
-    return (
-      <div>{row}</div>
-    )
-  }
+  })
 
   return (
     <AveragesList>
-      {makeRows()}
+      {rows}
     </AveragesList>
   )
 

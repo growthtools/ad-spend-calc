@@ -13,21 +13,17 @@ const HighAverages = () => {
     { "Email open rate": "2%" }
   ]
 
-  function makeRows() {
-    let row = [];
-    highAvgs.forEach((obj) => {
-      Object.keys(obj).forEach((key) => {
-        row.push(<div key={key}>{key}<span>{obj[key]}</span></div>)
-      })
+  let rows = [];
+  highAvgs.forEach((obj) => {
+    Object.keys(obj).forEach((key) => {
+      rows.push(<div key={key}>{key}<span>{obj[key]}</span></div>)
     })
-    return (
-      <div>{row}</div>
-    )
-  }
+  })
+
 
   return (
     <AveragesList>
-      {makeRows()}
+      <div>{rows}</div>
     </AveragesList>
   )
 
