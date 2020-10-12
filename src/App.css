@@ -41,6 +41,8 @@ body {
   font-family: "Brandon Text", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: #f9fafa;
 }
 
 code {
