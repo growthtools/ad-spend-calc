@@ -27,7 +27,7 @@ const Averages = ({ type }) => {
     let row = [];
     avgsArray.forEach((obj) => {
       Object.keys(obj).forEach((key) => {
-        row.push(<div>{key}<span>{obj[key]}</span></div>)
+        row.push(<div key={key}>{key}<span>{obj[key]}</span></div>)
       })
     })
     return (
@@ -59,16 +59,17 @@ const List = styled.div`
     margin-left: -1rem;
     padding: 0 1rem;
     font-size: 14px;
-    &:nth-child(odd) {
-      height: 40px;
-      line-height: 40px;
-    }
-    &:nth-child(even) {
-      line-height: 32px;
-      height: 32px;
-      background-color: #F9FAFA;
-    }
   }
+  div {
+    height: 40px;
+    line-height: 40px;
+  }
+  div:nth-child(2n+2) {
+    height: 32px;
+    line-height: 32px;
+    background-color: #F9FAFA;
+  }
+  
   span {
     float: right;
     font-size: 14px;
