@@ -11,6 +11,7 @@ import Conversions from "./Conversions";
 import CostPerClick from "./CostPerClick";
 import Results from "./Results";
 import AlertIcon from "./alert.svg";
+import IndustryAverages from "./IndustryAverages";
 import { newCompletionFor } from "./completion";
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           </Disclaimer>
         </div>
       </MainContent>
+      <IndustryAverages />
     </div>
   );
 }
