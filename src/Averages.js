@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const Averages = ({ type }) => {
@@ -10,8 +11,8 @@ const Averages = ({ type }) => {
     { "Live webinar conversion rate to booked call": "5%" },
     { "Evergreen webinar attendee rate": "60%" },
     { "Evergreen webinar conversion rate to booked call": "5%" },
-    { "Email open rate": "2%" }
-  ]
+    { "Email open rate": "2%" },
+  ];
 
   const lowAvgs = [
     { "Top of funnel CTR": "1%" },
@@ -20,20 +21,23 @@ const Averages = ({ type }) => {
     { "Webinar attendee rate": "5 - 20%" },
     { "Sales page add-to-cart rate": "16 - 20%" },
     { "Sales page conversion rate": "5%" },
-    { "Email open rate": "2%" }
-  ]
+    { "Email open rate": "2%" },
+  ];
 
-  const highAvgRows = (avgsArray) => {
+  const highAvgRows = avgsArray => {
     let row = [];
-    avgsArray.forEach((obj) => {
-      Object.keys(obj).forEach((key) => {
-        row.push(<div key={key}>{key}<span>{obj[key]}</span></div>)
-      })
-    })
-    return (
-      <div>{row}</div>
-    )
-  }
+    avgsArray.forEach(obj => {
+      Object.keys(obj).forEach(key => {
+        row.push(
+          <div key={key}>
+            {key}
+            <span>{obj[key]}</span>
+          </div>
+        );
+      });
+    });
+    return <div>{row}</div>;
+  };
 
   let rows = "";
   if (type === "low") {
@@ -43,13 +47,12 @@ const Averages = ({ type }) => {
     rows = highAvgRows(highAvgs);
   }
 
-  return (
-    <List>
-      {rows}
-    </List>
-  )
+  return <List>{rows}</List>;
+};
 
-}
+Averages.propTypes = {
+  type: PropTypes.string.isRequired,
+};
 
 export default Averages;
 
@@ -64,12 +67,13 @@ const List = styled.div`
     height: 40px;
     line-height: 40px;
   }
-  div:nth-child(2n+2) {
+
+  div:nth-child(even) {
     height: 32px;
     line-height: 32px;
-    background-color: #F9FAFA;
+    background-color: #f9fafa;
   }
-  
+
   span {
     float: right;
     font-size: 14px;
@@ -77,3 +81,4 @@ const List = styled.div`
     text-align: right;
   }
 `;
+

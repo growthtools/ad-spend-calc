@@ -14,9 +14,9 @@ const IndustryAverages = () => {
         <h3>Low ticket webinar coaching stats</h3>
         <Averages type="low" />
       </div>
-    </IndustryAveragesContent >
-  )
-}
+    </IndustryAveragesContent>
+  );
+};
 
 export default IndustryAverages;
 
@@ -41,8 +41,7 @@ const IndustryAveragesContent = styled.div`
     letter-spacing: 1px;
     line-height: 1.75rem;
     margin: 0 auto;
-    padding: .5rem 0;
-
+    padding: 0.5rem 0;
   }
   .col {
     max-width: 412px;
