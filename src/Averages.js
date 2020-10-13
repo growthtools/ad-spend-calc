@@ -58,14 +58,12 @@ export default Averages;
 
 const List = styled.div`
   color: #263238;
-  > div {
-    margin-left: -1rem;
-    padding: 0 1rem;
-    font-size: 14px;
-  }
   div {
     height: 40px;
     line-height: 40px;
+    margin-left: -1rem;
+    padding: 0 1rem;
+    font-size: 14px;
   }
 
   div:nth-child(even) {
