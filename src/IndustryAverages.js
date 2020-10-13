@@ -7,11 +7,11 @@ const IndustryAverages = () => {
     <IndustryAveragesContent>
       <h2>Industry averages</h2>
       <div className="col">
-        <h3>High ticket webinar coaching stats</h3>
+        <h3>Strategy call funnel stats</h3>
         <Averages type="high" />
       </div>
       <div className="col">
-        <h3>Low ticket webinar coaching stats</h3>
+        <h3>No strategy call funnel stats</h3>
         <Averages type="low" />
       </div>
     </IndustryAveragesContent>
