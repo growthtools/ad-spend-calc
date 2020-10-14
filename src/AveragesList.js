@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const AveragesList = styled.div`
 color: #263238;
-> div {
+div {
   margin-left: -1rem;
   padding: 0 1rem;
   font-size: 14px;
