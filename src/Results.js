@@ -67,7 +67,7 @@ const Results = ({
       label: "Reach required",
       value: Math.ceil(reachCount).toLocaleString("en"),
       description:
-        "Make sure your audience size you choose is beg enough for this.",
+        "Make sure your audience size you choose is big enough for this.",
     },
     {
       completed: isComplete(completion, "cpc"),
