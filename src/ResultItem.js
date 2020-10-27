@@ -2,23 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import CheckGreen from "./check-green.svg";
-import CheckGrey from "./check-grey.svg";
-
-const ResultItem = ({ completed, label, value, description, show }) => {
+const ResultItem = ({ label, value, description, show }) => {
   if (!show) {
     return null;
   }
 
   return (
-    <Item completed={completed}>
-      <span className="completed">
-        <img
-          alt="Checkmark"
-          aria-hidden="true"
-          src={completed ? CheckGreen : CheckGrey}
-        />
-      </span>
+    <Item>
       <span className="label">{label}</span>
       <span className="value">{value}</span>
       {description && <p>{description}</p>}
@@ -27,7 +17,6 @@ const ResultItem = ({ completed, label, value, description, show }) => {
 };
 
 ResultItem.propTypes = {
-  completed: PropTypes.bool.isRequired,
   label: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   description: PropTypes.string,
@@ -42,38 +31,26 @@ export default ResultItem;
 
 const Item = styled.div`
   position: relative;
-  padding: 1rem 0 1.5rem;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #273152;
 
-  .completed {
-    padding-right: 0.5rem;
-  }
   .label {
     vertical-align: top;
     font-weight: 500;
   }
   .value {
-    color: ${p => (p.completed ? "#2cd886" : "#455A64")};
+    color: #2cd886;
     margin-right: 1rem;
     text-align: right;
     float: right;
   }
   p {
     color: #78909c;
-    margin: 0 0 0.5rem 2rem;
+    margin: 0.5rem 0;
     font-size: 12px;
     font-style: italic;
     line-height: 16px;
     max-width: 181px;
-  }
-  &:not(:first-of-type)::before {
-    content: " ";
-    position: absolute;
-    top: -0.5rem;
-    left: -24px;
-    height: 1px;
-    width: 112%;
-    background-color: #0e143e;
-    filter: contrast(80%);
   }
   &:nth-of-type(1n + 8) {
     .value,
