@@ -141,12 +141,13 @@ const ResultCard = styled.div`
   background-color: #0e143e;
   border-radius: 12px;
   color: white;
-  padding: 2.5rem 1.5rem 0 1.5rem;
+  padding: 0;
 `;
 
 const ResultHeader = styled.h2`
   color: #2cd886;
-  margin: 0 0 2.5rem;
+  padding: 2.5rem 2.5rem 1rem;
+  margin: 0;
   font-family: Times, serif;
   font-size: 24px;
   font-weight: bold;

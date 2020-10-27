@@ -22,7 +22,7 @@ export default IndustryAverages;
 
 const IndustryAveragesContent = styled.div`
   margin: -2.5rem auto 2.5rem;
-  padding: 2.5rem 2rem 2.5rem;
+  padding: 2rem;
   max-width: 888px;
   border-radius: 12px;
   background-color: #ffffff;

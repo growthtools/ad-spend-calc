@@ -15,7 +15,6 @@ const RevenueGoals = ({ inputs, handleInput, completion }) => {
         value={inputs.revenueTarget}
         onChange={asFloat(handleInput("revenueTarget"))}
         label="Revenue target"
-        focus={true}
         tooltip="This is the amount of revenue you'd like to collect."
       />
       <Input
