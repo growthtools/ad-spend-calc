@@ -88,6 +88,7 @@ const InputForm = styled.div`
 
   input {
     width: 100%;
+    max-width: 17.5rem;
     margin-left: -1rem;
     box-sizing: border-box;
     font-weight: 300;
