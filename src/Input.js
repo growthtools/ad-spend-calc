@@ -112,7 +112,7 @@ const InputForm = styled.div`
       border-color: #b0bec5;
     }
     &:valid {
-      border-color: #b0bec5;
+      border-color: #cfd8dc;
     }
   }
 `;
