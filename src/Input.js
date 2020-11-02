@@ -15,7 +15,6 @@ const Input = ({ onChange, value, label, type, focus, tooltip }) => {
       <label htmlFor={label}>{label}</label>
       <input
         type="text"
-        className="input"
         id={label}
         name={label}
         value={value === 0 ? "" : value}
@@ -86,7 +85,8 @@ const InputForm = styled.div`
     font-size: 16px;
     color: #263238;
   }
-  .input {
+
+  input {
     width: 100%;
     margin-left: -1rem;
     box-sizing: border-box;
