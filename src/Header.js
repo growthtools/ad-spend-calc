@@ -27,7 +27,7 @@ const AppHeader = styled.div`
   background-image: url(/star.svg);
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: 80%;
+  background-size: 50%;
 
   h1 {
     margin-top: 11.75rem;
