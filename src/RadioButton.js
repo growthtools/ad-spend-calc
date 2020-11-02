@@ -38,18 +38,20 @@ const RadioButtonWrapper = styled.div`
   cursor: pointer;
   user-select: none;
 
+  &:not(:first-of-type) {
+    margin-left: 2rem;
+  }
+
   .container {
     color: #b0bec5;
+    cursor: pointer;
     &.checked {
       color: #263238;
     }
   }
   // hide the default radio button
   input {
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+    display: none;
   }
 
   // create a custom radio button
@@ -72,11 +74,7 @@ const RadioButtonWrapper = styled.div`
   // when the radio button is checked, add a green background
   & input:checked ~ .checkmark {
     background-color: #2cd886;
-  }
-
-  // when the radio button is focused, add a green glow
-  & input:focus ~ .checkmark {
-    filter: drop-shadow(1px 2px 3px green);
+    box-shadow: 0 2px 12px 0 rgba(44, 216, 134, 0.25);
   }
 
   /* inner dot/circle - hidden when not checked */
@@ -93,8 +91,8 @@ const RadioButtonWrapper = styled.div`
 
   /* style the dot/circle */
   .container .checkmark:after {
-    top: 7px;
-    left: 7px;
+    top: 6.5px;
+    left: 6.5px;
     width: 10px;
     height: 10px;
     border-radius: 50%;
