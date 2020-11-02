@@ -61,7 +61,7 @@ const InputForm = styled.div`
     position: absolute;
     height: 46px;
     width: 33px;
-    top: 32px;
+    top: 31px;
     left: -15px;
     border-radius: 5px 0 0 5px;
     background-color: #eceff1;
