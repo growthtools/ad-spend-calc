@@ -32,7 +32,10 @@ export default ResultItem;
 const Item = styled.div`
   position: relative;
   padding: 1rem 2rem;
-  border-bottom: 1px solid #273152;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid #273152;
+  }
 
   .label {
     vertical-align: top;
