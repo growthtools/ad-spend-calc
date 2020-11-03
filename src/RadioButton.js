@@ -91,8 +91,10 @@ const RadioButtonWrapper = styled.div`
 
   /* style the dot/circle */
   .container .checkmark:after {
-    top: 6.5px;
-    left: 6.5px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 10px;
     height: 10px;
     border-radius: 50%;

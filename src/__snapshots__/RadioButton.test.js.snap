@@ -3,7 +3,7 @@
 exports[`matches design when an item is not selected 1`] = `
 <DocumentFragment>
   <div
-    class="sc-bdnylx flWKCD"
+    class="sc-bdnylx ghEjMF"
   >
     <label
       class="container"
@@ -20,7 +20,7 @@ exports[`matches design when an item is not selected 1`] = `
     </label>
   </div>
   <div
-    class="sc-bdnylx flWKCD"
+    class="sc-bdnylx ghEjMF"
   >
     <label
       class="container"
@@ -42,7 +42,7 @@ exports[`matches design when an item is not selected 1`] = `
 exports[`matches design when an item is selected 1`] = `
 <DocumentFragment>
   <div
-    class="sc-bdnylx flWKCD"
+    class="sc-bdnylx ghEjMF"
   >
     <label
       class="container checked"
@@ -60,7 +60,7 @@ exports[`matches design when an item is selected 1`] = `
     </label>
   </div>
   <div
-    class="sc-bdnylx flWKCD"
+    class="sc-bdnylx ghEjMF"
   >
     <label
       class="container"
