@@ -21,6 +21,7 @@ const Wrapper = styled.div`
   position: absolute;
   top: 6rem;
   left: -1rem;
+  max-width: 17.5rem;
   width: calc(100% - 2rem);
   z-index: 1;
 
