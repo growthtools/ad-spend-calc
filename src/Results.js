@@ -140,6 +140,7 @@ const asPct = rate => rate / 100.0;
 const ResultCard = styled.div`
   background-color: #0e143e;
   border-radius: 12px;
+  box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
   color: white;
   padding: 0;
 `;
