@@ -68,7 +68,7 @@ const industryStandards = {
 
 const MainContent = styled.div`
   margin: -5.5rem auto 5rem;
-  padding: 5rem 3.5rem 2.5rem;
+  padding: 6rem 3.5rem 2.5rem;
   max-width: 888px;
   border-radius: 12px;
   background-color: #ffffff;
