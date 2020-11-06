@@ -46,6 +46,7 @@ const Item = styled.div`
     margin-right: 1rem;
     text-align: right;
     float: right;
+    font-variant-numeric: tabular-nums;
   }
   p {
     color: #78909c;

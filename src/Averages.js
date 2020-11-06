@@ -77,6 +77,6 @@ const List = styled.div`
     font-size: 14px;
     font-weight: bold;
     text-align: right;
+    font-variant-numeric: tabular-nums;
   }
 `;
-
