@@ -1,18 +1,19 @@
 import React from "react";
 import styled from "styled-components";
-import Averages from "./Averages";
+import LowAverages from "./LowAverages";
+import HighAverages from "./HighAverages";
 
 const IndustryAverages = () => {
   return (
     <IndustryAveragesContent>
       <h2>Industry averages</h2>
       <div className="col">
-        <h3>Strategy call funnel stats</h3>
-        <Averages type="high" />
+        <h3>High ticket webinar coaching stats</h3>
+        <HighAverages />
       </div>
       <div className="col">
-        <h3>No strategy call funnel stats</h3>
-        <Averages type="low" />
+        <h3>Low ticket webinar coaching stats</h3>
+        <LowAverages />
       </div>
     </IndustryAveragesContent>
   );
